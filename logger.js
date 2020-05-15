@@ -1,23 +1,22 @@
-// practical exm of emmiter 
+// practical exm of emmiter
 const EventEmitter = require('events');
 const uuid = require('uuid');
 
 class Logger extends EventEmitter {
-    // method log
-    log(msg) {
-        this.emit('message', {id: uuid.v4(), msg })
-    }
+  // method log
+  log(msg) {
+    this.emit("message", { id: uuid.v4(), msg });
+  }
 }
 
 module.exports = Logger;
 
-
 /*
 i moved this here from index.js to have exp
-//commenjs methods 
+//commenjs methods
 const Logger = require('./logger')
 
-// instant 
+// instant
 const logObj = new Logger();
 logObj.on('message', (data)=> {
     console.log(data)
