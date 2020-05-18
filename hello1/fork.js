@@ -14,3 +14,9 @@ function sayGreet(names) {
 }
 
 sayGreet(data);
+
+// 3- listen to parent message
+process.on('message', (userData)=> {
+  console.log('child received:')
+  console.dir(userData)
+})
